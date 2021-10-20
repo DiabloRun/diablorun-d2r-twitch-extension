@@ -1,0 +1,130 @@
+body {
+  background-color: black;
+  user-select: none;
+}
+
+.toggle {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.inventory {
+  display: none;
+}
+
+.inventory,
+.inventory > * {
+  position: absolute;
+}
+
+.inventory {
+  width: 593px;
+  height: 442px;
+  background-image: url(img/bg.jpg);
+  border-radius: 10px;
+}
+
+.item {
+  cursor: pointer;
+}
+
+.item:hover + .description {
+  display: block;
+}
+
+.description {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 3px);
+  z-index: 2;
+  max-height: 720px;
+}
+
+.primary_left {
+  top: 56px;
+  left: 22px;
+}
+.primary_right {
+  top: 56px;
+  left: 458px;
+}
+.head {
+  top: 24px;
+  left: 239px;
+}
+.body_armor {
+  top: 165px;
+  left: 239px;
+}
+.gloves {
+  top: 306px;
+  left: 21px;
+}
+.belt {
+  top: 363px;
+  left: 239px;
+}
+.boots {
+  top: 306px;
+  left: 457px;
+}
+.amulet {
+  top: 121px;
+  left: 376px;
+}
+.ring_left {
+  top: 363px;
+  left: 159px;
+}
+.ring_right {
+  top: 363px;
+  left: 376px;
+}
+
+.primary_left .item {
+  width: 113px;
+  height: 222px;
+}
+.primary_right .item {
+  width: 113px;
+  height: 222px;
+}
+.head .item {
+  width: 113px;
+  height: 113px;
+}
+
+.body_armor .item {
+  width: 113px;
+  height: 170px;
+}
+.gloves .item {
+  width: 113px;
+  height: 113px;
+}
+.belt .item {
+  width: 113px;
+  height: 56px;
+}
+.boots .item {
+  width: 113px;
+  height: 113px;
+}
+.amulet .item {
+  width: 56px;
+  height: 56px;
+}
+.ring_left .item {
+  width: 56px;
+  height: 56px;
+}
+.ring_right .item {
+  width: 56px;
+  height: 56px;
+}
+
+/* Helpers */
+.visible {
+  display: block;
+}
