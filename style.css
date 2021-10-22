@@ -30,6 +30,18 @@ body > * {
   z-index: -1;
 }
 
+.swap-container {
+  max-height: 35px;
+  overflow: hidden;
+  top: 20px;
+  left: 16px;
+}
+
+.swap.secondary {
+  position: relative;
+  bottom: 35px;
+}
+
 .item:hover + .description {
   display: block;
 }
