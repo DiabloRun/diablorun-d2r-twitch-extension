@@ -8,7 +8,8 @@ body > * {
 }
 
 .toggle {
-  border-radius: 10px;
+  margin-bottom: -11px;
+  z-index: 1;
 }
 
 .inventory {
@@ -25,6 +26,8 @@ body > * {
   height: 442px;
   background-image: url(img/bg.jpg);
   border-radius: 10px;
+  border-top-left-radius: 0;
+  z-index: -1;
 }
 
 .item:hover + .description {
