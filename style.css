@@ -3,9 +3,12 @@ body {
   user-select: none;
 }
 
+body > * {
+  cursor: url(img/cursor.png), auto;
+}
+
 .toggle {
   border-radius: 10px;
-  cursor: pointer;
 }
 
 .inventory {
@@ -22,10 +25,6 @@ body {
   height: 442px;
   background-image: url(img/bg.jpg);
   border-radius: 10px;
-}
-
-.item {
-  cursor: pointer;
 }
 
 .item:hover + .description {
