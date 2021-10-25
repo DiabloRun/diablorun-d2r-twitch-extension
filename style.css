@@ -1,6 +1,7 @@
 body {
-  background-color: black;
+  background: none;
   user-select: none;
+  margin: 20px;
 }
 
 body > * {
@@ -8,6 +9,7 @@ body > * {
 }
 
 .toggle {
+  position: relative;
   margin-bottom: -11px;
   z-index: 1;
 }
