@@ -16,28 +16,36 @@
       src="img/toggle.png"
       alt="Toggle"
     />
-    <div id="inventory" class="inventory">
+    <div id="inventory" class="inventory hidden">
+      <div
+        onclick="swap();"
+        ondblclick="event.stopPropagation()"
+        class="swap-button primary"
+      ></div>
+      <div
+        onclick="swap();"
+        ondblclick="event.stopPropagation()"
+        class="swap-button secondary"
+      ></div>
       <div class="swap-container">
-        <img class="swap" src="img/swap.png" />
+        <img id="swap" class="swap" src="img/swap.png" />
       </div>
-      <div class="slot primary_left">
+      <div id="primary_left_slot" class="slot primary_left">
         <img id="primary_left" alt="Primary left" class="item" />
         <img id="primary_left_description" class="description" />
       </div>
-      <div class="slot primary_right">
+      <div id="primary_right_slot" class="slot primary_right">
         <img id="primary_right" alt="Primary right" class="item" />
         <img id="primary_right_description" class="description" />
       </div>
-      <!--
-        <div class="slot secondary_left">
+      <div id="secondary_left_slot" class="slot secondary_left hidden">
         <img id="secondary_left" alt="Secondary left" class="item" />
         <img id="secondary_left_description" class="description" />
       </div>
-      <div class="slot secondary_right">
+      <div id="secondary_right_slot" class="slot secondary_right hidden">
         <img id="secondary_right" alt="Secondary right" class="item" />
         <img id="secondary_right_description" class="description" />
       </div>
--->
       <div class="slot head">
         <img id="head" alt="Head" class="item" />
         <img id="head_description" class="description" />

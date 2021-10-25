@@ -12,10 +12,6 @@ body > * {
   z-index: 1;
 }
 
-.inventory {
-  display: none;
-}
-
 .inventory,
 .inventory > * {
   position: absolute;
@@ -27,7 +23,7 @@ body > * {
   background-image: url(img/bg.jpg);
   border-radius: 10px;
   border-top-left-radius: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .swap-container {
@@ -40,6 +36,20 @@ body > * {
 .swap.secondary {
   position: relative;
   bottom: 35px;
+}
+
+.swap-button {
+  height: 29px;
+  width: 125px;
+  z-index: 1;
+}
+.swap-button.primary {
+  top: 20px;
+  left: 16px;
+}
+.swap-button.secondary {
+  top: 20px;
+  right: 16px;
 }
 
 .item:hover + .description {
@@ -55,11 +65,13 @@ body > * {
   max-height: 720px;
 }
 
-.primary_left {
+.primary_left,
+.secondary_left {
   top: 56px;
   left: 22px;
 }
-.primary_right {
+.primary_right,
+.secondary_right {
   top: 56px;
   left: 458px;
 }
@@ -139,6 +151,6 @@ body > * {
 }
 
 /* Helpers */
-.visible {
-  display: block;
+.hidden {
+  display: none;
 }
