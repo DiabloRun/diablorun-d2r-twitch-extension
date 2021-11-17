@@ -18,6 +18,11 @@ window.Twitch.ext.onAuthorized(function (auth) {
   channelID = auth.channelId;
 });
 
+document.querySelectorAll("img").forEach((img) => {
+  img.addEventListener("error", () => (img.style.visibility = "hidden"));
+  img.addEventListener("load", () => (img.style.visibility = "visible"));
+});
+
 const inventory = document.getElementById("inventory");
 const primaryLeft = document.getElementById("primary_left_slot");
 const primaryRight = document.getElementById("primary_right_slot");
