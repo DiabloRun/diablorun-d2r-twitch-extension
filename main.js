@@ -4,6 +4,23 @@ const primaryRight = document.getElementById("primary_right_slot");
 const secondaryLeft = document.getElementById("secondary_left_slot");
 const secondaryRight = document.getElementById("secondary_right_slot");
 const swapImage = document.getElementById("swap");
+
+document.getElementById("toggle").addEventListener("click", (event) => {
+  toggle();
+});
+
+document.getElementById("toggle").addEventListener("dblclick", (event) => {
+  event.stopPropagation();
+});
+
+document.getElementById("swapBtn").addEventListener("dblclick", (event) => {
+  event.stopPropagation();
+});
+
+document.getElementById("swapBtn").addEventListener("click", (event) => {
+  swap();
+});
+
 let channelID = "Indrek";
 const itemSlots = [
   "head",

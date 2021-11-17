@@ -1,5 +1,6 @@
 body {
-  background: none;
+  /*background: #0e0e10;*/
+  background: transparent;
   user-select: none;
   margin: 20px;
 }
