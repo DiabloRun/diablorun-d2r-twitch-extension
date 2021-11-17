@@ -13,13 +13,27 @@ document.getElementById("toggle").addEventListener("dblclick", (event) => {
   event.stopPropagation();
 });
 
-document.getElementById("swapBtn").addEventListener("dblclick", (event) => {
-  event.stopPropagation();
-});
+document
+  .getElementById("swapBtnPrimary")
+  .addEventListener("dblclick", (event) => {
+    event.stopPropagation();
+  });
 
-document.getElementById("swapBtn").addEventListener("click", (event) => {
+document
+  .getElementById("swapBtnSecondary")
+  .addEventListener("dblclick", (event) => {
+    event.stopPropagation();
+  });
+
+document.getElementById("swapBtnPrimary").addEventListener("click", (event) => {
   swap();
 });
+
+document
+  .getElementById("swapBtnSecondary")
+  .addEventListener("click", (event) => {
+    swap();
+  });
 
 let channelID = "Indrek";
 const itemSlots = [
