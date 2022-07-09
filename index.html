@@ -7,63 +7,66 @@
     <link rel="stylesheet" href="style.css" />
     <title>Diablo.run Twitch Extension</title>
   </head>
+
   <body>
     <img id="toggle" class="toggle" src="img/toggle.png" alt="Toggle" />
-    <div id="inventory" class="inventory hidden">
-      <div id="swapBtnPrimary" class="swap-button primary"></div>
-      <div id="swapBtnSecondary" class="swap-button secondary"></div>
-      <div class="swap-container">
-        <img id="swap" class="swap" src="img/swap.png" />
+    <main>
+      <div id="inventory" class="inventory hidden">
+        <div id="swapBtnPrimary" class="swap-button primary"></div>
+        <div id="swapBtnSecondary" class="swap-button secondary"></div>
+        <div class="swap-container">
+          <img id="swap" class="swap" src="img/swap.png" />
+        </div>
+        <div id="primary_left_slot" class="slot primary_left">
+          <img id="primary_left" alt="Primary left" class="item" />
+          <div id="primary_left_description" class="description"></div>
+        </div>
+        <div id="primary_right_slot" class="slot primary_right">
+          <img id="primary_right" alt="Primary right" class="item" />
+          <div id="primary_right_description" class="description"></div>
+        </div>
+        <div id="secondary_left_slot" class="slot secondary_left hidden">
+          <img id="secondary_left" alt="Secondary left" class="item" />
+          <div id="secondary_left_description" class="description"></div>
+        </div>
+        <div id="secondary_right_slot" class="slot secondary_right hidden">
+          <img id="secondary_right" alt="Secondary right" class="item" />
+          <div id="secondary_right_description" class="description"></div>
+        </div>
+        <div class="slot head">
+          <img id="head" alt="Head" class="item" />
+          <div id="head_description" class="description"></div>
+        </div>
+        <div class="slot body_armor">
+          <img id="body_armor" alt="Body armor" class="item" />
+          <div id="body_armor_description" class="description"></div>
+        </div>
+        <div class="slot gloves">
+          <img id="gloves" alt="Gloves" class="item" />
+          <div id="gloves_description" class="description"></div>
+        </div>
+        <div class="slot belt">
+          <img id="belt" alt="Belt" class="item" />
+          <div id="belt_description" class="description"></div>
+        </div>
+        <div class="slot boots">
+          <img id="boots" alt="Boots" class="item" />
+          <div id="boots_description" class="description"></div>
+        </div>
+        <div class="slot amulet">
+          <img id="amulet" alt="Amulet" class="item" />
+          <div id="amulet_description" class="description"></div>
+        </div>
+        <div class="slot ring_left">
+          <img id="ring_left" alt="Ring left" class="item" />
+          <div id="ring_left_description" class="description"></div>
+        </div>
+        <div class="slot ring_right">
+          <img id="ring_right" alt="Ring right" class="item" />
+          <div id="ring_right_description" class="description"></div>
+        </div>
       </div>
-      <div id="primary_left_slot" class="slot primary_left">
-        <img id="primary_left" alt="Primary left" class="item" />
-        <img id="primary_left_description" class="description" />
-      </div>
-      <div id="primary_right_slot" class="slot primary_right">
-        <img id="primary_right" alt="Primary right" class="item" />
-        <img id="primary_right_description" class="description" />
-      </div>
-      <div id="secondary_left_slot" class="slot secondary_left hidden">
-        <img id="secondary_left" alt="Secondary left" class="item" />
-        <img id="secondary_left_description" class="description" />
-      </div>
-      <div id="secondary_right_slot" class="slot secondary_right hidden">
-        <img id="secondary_right" alt="Secondary right" class="item" />
-        <img id="secondary_right_description" class="description" />
-      </div>
-      <div class="slot head">
-        <img id="head" alt="Head" class="item" />
-        <img id="head_description" class="description" />
-      </div>
-      <div class="slot body_armor">
-        <img id="body_armor" alt="Body armor" class="item" />
-        <img id="body_armor_description" class="description" />
-      </div>
-      <div class="slot gloves">
-        <img id="gloves" alt="Gloves" class="item" />
-        <img id="gloves_description" class="description" />
-      </div>
-      <div class="slot belt">
-        <img id="belt" alt="Belt" class="item" />
-        <img id="belt_description" class="description" />
-      </div>
-      <div class="slot boots">
-        <img id="boots" alt="Boots" class="item" />
-        <img id="boots_description" class="description" />
-      </div>
-      <div class="slot amulet">
-        <img id="amulet" alt="Amulet" class="item" />
-        <img id="amulet_description" class="description" />
-      </div>
-      <div class="slot ring_left">
-        <img id="ring_left" alt="Ring left" class="item" />
-        <img id="ring_left_description" class="description" />
-      </div>
-      <div class="slot ring_right">
-        <img id="ring_right" alt="Ring right" class="item" />
-        <img id="ring_right_description" class="description" />
-      </div>
-    </div>
+    </main>
     <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
     <script src="main.js"></script>
   </body>

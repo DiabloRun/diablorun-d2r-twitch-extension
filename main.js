@@ -1,3 +1,5 @@
+const api_url = "https://api.diablo.run/snapshots/users/";
+
 let channelID = "Indrek";
 const itemSlots = [
   "head",
@@ -60,27 +62,27 @@ document
     swap();
   });
 
-function toggle() {
+async function toggle() {
   inventory.classList.toggle("hidden");
 
   if (!inventory.classList.contains("hidden")) {
-    for (let slot of itemSlots) {
-      document.getElementById(slot).src =
-        "https://api.diablo.run/d2r/" +
-        channelID +
-        "/item/character/" +
-        slot +
-        ".jpg" +
-        "?" +
-        Date.now();
-      document.getElementById(slot + "_description").src =
-        "https://api.diablo.run/d2r/" +
-        channelID +
-        "/item-description/character/" +
-        slot +
-        ".jpg" +
-        "?" +
-        Date.now();
+    const res = await fetch(api_url + channelID);
+    const data = await res.json();
+
+    for (const item of data.items) {
+      if (item.container === "character" && itemSlots.includes(item.slot)) {
+        const properties = JSON.parse(item.properties);
+        const slotImage = document.getElementById(item.slot);
+        const slotDescription = document.getElementById(
+          item.slot + "_description"
+        );
+        slotImage.src = item.imageUrl;
+
+        let description = `<p class="quality-${item.quality}">${item.name}</p>`;
+        description += `<p class="quality-socketed">${item.base_name}</p>`;
+        description += `<p>${properties.join("<br />")}</p>`;
+        slotDescription.innerHTML = description;
+      }
     }
   }
 }
@@ -91,4 +93,8 @@ function swap() {
   secondaryLeft.classList.toggle("hidden");
   secondaryRight.classList.toggle("hidden");
   swapImage.classList.toggle("secondary");
+}
+
+if (window.location.hostname === "localhost") {
+  toggle();
 }

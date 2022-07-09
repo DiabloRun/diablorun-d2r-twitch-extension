@@ -1,12 +1,44 @@
 body {
-  /*background: #0e0e10;*/
-  background: transparent;
+  background: #0e0e10;
+  /*background: transparent;*/
   user-select: none;
   margin: 20px;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
 }
 
 body > * {
   cursor: url(img/cursor.png), auto;
+}
+
+main {
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    transform: scale(0.6);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main {
+    transform: scale(0.75);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    transform: scale(0.85);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  main {
+    transform: scale(1);
+  }
 }
 
 .toggle {
@@ -55,17 +87,34 @@ body > * {
   right: 16px;
 }
 
-.item:hover + .description {
+.slot {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot:hover .description {
   display: block;
 }
 
 .description {
+  font-size: 1.5rem;
+  padding: 1rem;
+  white-space: nowrap;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+  color: whitesmoke;
   display: none;
   position: absolute;
   top: 0;
   left: calc(100% + 3px);
   z-index: 2;
   max-height: 720px;
+  pointer-events: none;
+}
+
+.description p {
+  margin: 0;
 }
 
 .primary_left,
@@ -111,46 +160,75 @@ body > * {
   left: 376px;
 }
 
-.primary_left .item {
+.primary_left,
+.primary_right,
+.secondary_left,
+.secondary_right {
   width: 113px;
   height: 222px;
 }
-.primary_right .item {
-  width: 113px;
-  height: 222px;
-}
-.head .item {
+
+.head.slot {
   width: 113px;
   height: 113px;
 }
 
-.body_armor .item {
+.body_armor.slot {
   width: 113px;
   height: 170px;
 }
-.gloves .item {
+.gloves.slot {
   width: 113px;
   height: 113px;
 }
-.belt .item {
+.belt.slot {
   width: 113px;
   height: 56px;
 }
-.boots .item {
+.boots.slot {
   width: 113px;
   height: 113px;
 }
-.amulet .item {
+.amulet.slot {
   width: 56px;
   height: 56px;
 }
-.ring_left .item {
+.ring_left.slot {
   width: 56px;
   height: 56px;
 }
-.ring_right .item {
+.ring_right.slot {
   width: 56px;
   height: 56px;
+}
+
+.quality-yellow {
+  color: #fdfd70;
+}
+.quality-red {
+  color: #e72626;
+}
+.quality-orange {
+  color: #f7c100;
+}
+.quality-green {
+  color: #01fd00;
+}
+.quality-gold {
+  color: #dcc784;
+}
+.quality-blue {
+  color: #7575fd;
+}
+.quality-socketed {
+  opacity: 0.5;
+}
+.quality-white {
+  color: #fdfdfd;
+}
+.quality-empty {
+  opacity: 0.5;
+  color: #fdfdfd;
 }
 
 /* Helpers */
