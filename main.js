@@ -78,7 +78,7 @@ async function toggle() {
         );
         slotImage.src = item.imageUrl;
 
-        let description = `<p class="quality-${item.quality}">${item.name}</p>`;
+        let description = `<p class="quality-${item.quality} text-weight-bold">${item.name}</p>`;
         description += `<p class="quality-socketed">${item.base_name}</p>`;
         description += `<p>${properties.join("<br />")}</p>`;
         slotDescription.innerHTML = description;

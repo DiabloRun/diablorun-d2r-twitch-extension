@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   background: #0e0e10;
   /*background: transparent;*/
@@ -98,8 +107,7 @@ main {
 }
 
 .description {
-  font-size: 1.5rem;
-  padding: 1rem;
+  padding: 0.75rem;
   white-space: nowrap;
   text-align: center;
   background: rgba(0, 0, 0, 0.75);
@@ -109,7 +117,6 @@ main {
   top: 0;
   left: calc(100% + 3px);
   z-index: 2;
-  max-height: 720px;
   pointer-events: none;
 }
 
@@ -234,4 +241,8 @@ main {
 /* Helpers */
 .hidden {
   display: none;
+}
+
+.text-weight-bold {
+  font-weight: 600;
 }
