@@ -84,6 +84,9 @@ async function toggle() {
         slotDescription.innerHTML = description;
       }
     }
+
+    const level = document.getElementById("level");
+    level.innerHTML = "Level " + data.character.level;
   }
 }
 

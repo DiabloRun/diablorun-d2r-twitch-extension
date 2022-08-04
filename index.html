@@ -9,64 +9,67 @@
   </head>
 
   <body>
-    <img id="toggle" class="toggle" src="img/toggle.png" alt="Toggle" />
-    <main>
-      <div id="inventory" class="inventory hidden">
-        <div id="swapBtnPrimary" class="swap-button primary"></div>
-        <div id="swapBtnSecondary" class="swap-button secondary"></div>
-        <div class="swap-container">
-          <img id="swap" class="swap" src="img/swap.png" />
+    <section>
+      <img id="toggle" class="toggle" src="img/toggle.png" alt="Toggle" />
+      <main>
+        <div id="inventory" class="inventory hidden">
+          <div id="level" class="character-level">Level 1</div>
+          <div id="swapBtnPrimary" class="swap-button primary"></div>
+          <div id="swapBtnSecondary" class="swap-button secondary"></div>
+          <div class="swap-container">
+            <img id="swap" class="swap" src="img/swap.png" />
+          </div>
+          <div id="primary_left_slot" class="slot primary_left">
+            <img id="primary_left" class="item" />
+            <div id="primary_left_description" class="description"></div>
+          </div>
+          <div id="primary_right_slot" class="slot primary_right">
+            <img id="primary_right" class="item" />
+            <div id="primary_right_description" class="description"></div>
+          </div>
+          <div id="secondary_left_slot" class="slot secondary_left hidden">
+            <img id="secondary_left" class="item" />
+            <div id="secondary_left_description" class="description"></div>
+          </div>
+          <div id="secondary_right_slot" class="slot secondary_right hidden">
+            <img id="secondary_right" class="item" />
+            <div id="secondary_right_description" class="description"></div>
+          </div>
+          <div class="slot head">
+            <img id="head" class="item" />
+            <div id="head_description" class="description"></div>
+          </div>
+          <div class="slot body_armor">
+            <img id="body_armor" class="item" />
+            <div id="body_armor_description" class="description"></div>
+          </div>
+          <div class="slot gloves">
+            <img id="gloves" class="item" />
+            <div id="gloves_description" class="description"></div>
+          </div>
+          <div class="slot belt">
+            <img id="belt" class="item" />
+            <div id="belt_description" class="description"></div>
+          </div>
+          <div class="slot boots">
+            <img id="boots" class="item" />
+            <div id="boots_description" class="description"></div>
+          </div>
+          <div class="slot amulet">
+            <img id="amulet" class="item" />
+            <div id="amulet_description" class="description"></div>
+          </div>
+          <div class="slot ring_left">
+            <img id="ring_left" class="item" />
+            <div id="ring_left_description" class="description"></div>
+          </div>
+          <div class="slot ring_right">
+            <img id="ring_right" class="item" />
+            <div id="ring_right_description" class="description"></div>
+          </div>
         </div>
-        <div id="primary_left_slot" class="slot primary_left">
-          <img id="primary_left" class="item" />
-          <div id="primary_left_description" class="description"></div>
-        </div>
-        <div id="primary_right_slot" class="slot primary_right">
-          <img id="primary_right" class="item" />
-          <div id="primary_right_description" class="description"></div>
-        </div>
-        <div id="secondary_left_slot" class="slot secondary_left hidden">
-          <img id="secondary_left" class="item" />
-          <div id="secondary_left_description" class="description"></div>
-        </div>
-        <div id="secondary_right_slot" class="slot secondary_right hidden">
-          <img id="secondary_right" class="item" />
-          <div id="secondary_right_description" class="description"></div>
-        </div>
-        <div class="slot head">
-          <img id="head" class="item" />
-          <div id="head_description" class="description"></div>
-        </div>
-        <div class="slot body_armor">
-          <img id="body_armor" class="item" />
-          <div id="body_armor_description" class="description"></div>
-        </div>
-        <div class="slot gloves">
-          <img id="gloves" class="item" />
-          <div id="gloves_description" class="description"></div>
-        </div>
-        <div class="slot belt">
-          <img id="belt" class="item" />
-          <div id="belt_description" class="description"></div>
-        </div>
-        <div class="slot boots">
-          <img id="boots" class="item" />
-          <div id="boots_description" class="description"></div>
-        </div>
-        <div class="slot amulet">
-          <img id="amulet" class="item" />
-          <div id="amulet_description" class="description"></div>
-        </div>
-        <div class="slot ring_left">
-          <img id="ring_left" class="item" />
-          <div id="ring_left_description" class="description"></div>
-        </div>
-        <div class="slot ring_right">
-          <img id="ring_right" class="item" />
-          <div id="ring_right_description" class="description"></div>
-        </div>
-      </div>
-    </main>
+      </main>
+    </section>
     <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
     <script src="main.js"></script>
   </body>
